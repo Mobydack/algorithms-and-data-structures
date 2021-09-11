@@ -26,8 +26,7 @@ int main(void)
 
 	const char *result_buffer = malloc(sizeof result + 1);
 
-	sprintf(result_buffer, "%lld", result);
-	fputs(result_buffer, fp_write);
+	fprintf(fp_write, "%lld", result);
 	fclose(fp_write);
 
 	return 0;
